@@ -27,9 +27,9 @@ logs/*.log
 # Dataset (will be uploaded to GitHub Releases)
 data/articles.csv
 
-# Sandbox results (temporary manual runs)
-data/sandbox/*
-!data/sandbox/.gitkeep
+# Sandbox results — folder timestamp di-commit, isi file ikut
+# (hanya .gitkeep yang ditrack saat folder kosong)
+data/sandbox/.gitkeep
 
 # OS
 .DS_Store
