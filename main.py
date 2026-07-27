@@ -269,6 +269,28 @@ async def main():
         from phase3_harvester import run_phase3
         await run_phase3()
 
+        # Update state.json setelah harvest selesai (skip di sandbox mode)
+        if not sandbox_dir:
+            import json as _json
+            state = {
+                "last_run_date": datetime.now().strftime("%Y-%m-%d"),
+                "last_run_phases": phases,
+                "year_from": from_year,
+                "year_until": to_year,
+            }
+            # Hitung total artikel jika ada
+            try:
+                import csv as _csv
+                with open(PATHS["articles_csv"], newline="", encoding="utf-8") as f:
+                    state["total_articles"] = sum(1 for _ in _csv.DictReader(f))
+            except Exception:
+                pass
+            PATHS["state_json"].write_text(
+                _json.dumps(state, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8"
+            )
+            logger.info(f"state.json diupdate: {state}")
+
     # ── Ringkasan ─────────────────────────────────────────────────────────────
     finished_at  = datetime.now()
     summary_text = write_run_summary(phases, from_year, to_year,

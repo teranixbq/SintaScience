@@ -57,7 +57,8 @@ jobs:
           gh release create ${{ steps.date.outputs.date }} \
             dataset-${{ steps.date.outputs.date }}.zip \
             --title "Dataset ${{ steps.date.outputs.date }}" \
-            --notes "Harvest bulanan jurnal Sinta 3-4 Science"
+            --notes "Harvest bulanan jurnal Sinta 3-4 Science" \
+            --clobber
       
       - name: Commit state.json
         run: |
