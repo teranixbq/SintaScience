@@ -54,11 +54,14 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # Hapus release lama jika ada (suppress error jika tidak ada)
+          gh release delete ${{ steps.date.outputs.date }} --yes 2>/dev/null || true
+          
+          # Buat release baru
           gh release create ${{ steps.date.outputs.date }} \
             dataset-${{ steps.date.outputs.date }}.zip \
             --title "Dataset ${{ steps.date.outputs.date }}" \
-            --notes "Harvest bulanan jurnal Sinta 3-4 Science" \
-            --clobber
+            --notes "Harvest bulanan jurnal Sinta 3-4 Science"
       
       - name: Commit state.json
         run: |
