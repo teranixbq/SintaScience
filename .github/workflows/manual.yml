@@ -55,6 +55,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/sandbox/${{ steps.sandbox.outputs.folder }}/
+          git add -f data/sandbox/${{ steps.sandbox.outputs.folder }}/
           git diff --staged --quiet || git commit -m "test: sandbox run ${{ steps.sandbox.outputs.folder }} (phase ${{ github.event.inputs.phase }})"
           git push
