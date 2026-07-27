@@ -1,0 +1,63 @@
+{
+  "https://e-journal.undikma.ac.id/index.php/jmpm/oai": {
+    "status": "error",
+    "resumption_token": null,
+    "articles_harvested": 0,
+    "page": 1,
+    "error": "403 Client Error: Forbidden for url: https://e-journal.undikma.ac.id/index.php/jmpm/oai?verb=ListRecords&metadataPrefix=oai_dc"
+  },
+  "https://ejournal.poltekharber.ac.id/index.php/informatika/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 0,
+    "page": 2
+  },
+  "https://jurnal.umsu.ac.id/index.php/mbisnis/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 42,
+    "page": 11
+  },
+  "https://ejournal.uin-suska.ac.id/index.php/Psikobuletin/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 119,
+    "page": 3
+  },
+  "https://journals2.ums.ac.id/index.php/benefit/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 52,
+    "page": 2
+  },
+  "https://ejournal.uksw.edu/juses/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 73,
+    "page": 3
+  },
+  "https://journal.uad.ac.id/index.php/JITEKI/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 279,
+    "page": 42
+  },
+  "https://research.adra.ac.id/index.php/jete/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 127,
+    "page": 3
+  },
+  "https://online-journal.unja.ac.id/index.php/EDP/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 174,
+    "page": 4
+  },
+  "https://journal.ugm.ac.id/jkesvo/oai": {
+    "status": "done",
+    "resumption_token": null,
+    "articles_harvested": 115,
+    "page": 4
+  }
+}

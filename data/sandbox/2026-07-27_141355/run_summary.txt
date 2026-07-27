@@ -1,0 +1,51 @@
+============================================================
+SINTA 3-4 OAI HARVESTER — RUN SUMMARY
+============================================================
+Started     : 2026-07-27 14:13:55
+Finished    : 2026-07-27 14:15:55
+Duration    : 1m 59s
+Phases      : [3]
+Year range  : 2022 – 2026
+Subject     : science
+Output dir  : /home/runner/work/SintaScience/SintaScience/data
+------------------------------------------------------------
+Total artikel: 981
+
+Per tahun:
+  2022: 169 artikel
+  2023: 263 artikel
+  2024: 237 artikel
+  2025: 220 artikel
+  2026: 92 artikel
+
+Per Sinta grade:
+  Sinta 3: 981 artikel
+
+Per publisher (top 10):
+  [ 279] Universitas Ahmad Dahlan
+  [ 174] Program Studi Pendidikan Fisika FKIP Universitas Jambi
+  [ 127] Yayasan Adra Karima Hubbi
+  [ 119] Universitas Islam Negeri Sultan Syarif Kasim Riau
+  [ 115] Sekolah Vokasi Universitas Gadjah Mada
+  [  73] Faculty of Science and Mathematics, Universitas Kristen Satya Wacana, Indonesia
+  [  52] Universitas Muhammadiyah Surakarta
+  [  42] UNIVERSITAS MUHAMMADIYAH SUMATERA UTARA
+
+Klasifikasi jurnal:
+  OAI aktif   : 10 jurnal
+  OJS no-OAI  : 0 jurnal
+  Non-OJS     : 0 jurnal
+  Error       : 0 jurnal
+
+Progress per jurnal:
+  error        |    0 artikel | jmpm
+  done         |    0 artikel | informatika
+  done         |   42 artikel | mbisnis
+  done         |  119 artikel | Psikobuletin
+  done         |   52 artikel | benefit
+  done         |   73 artikel | juses
+  done         |  279 artikel | JITEKI
+  done         |  127 artikel | jete
+  done         |  174 artikel | EDP
+  done         |  115 artikel | jkesvo
+============================================================
