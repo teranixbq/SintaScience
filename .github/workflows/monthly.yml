@@ -1,0 +1,66 @@
+name: Monthly Harvest
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'  # Tanggal 1 setiap bulan, jam 00:00 UTC
+  workflow_dispatch:      # Manual trigger
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Clean sandbox folder
+        run: |
+          if [ -d "data/sandbox" ]; then
+            find data/sandbox -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
+            echo "Sandbox folder cleaned"
+          fi
+      
+      - name: Run Phase 3 (Harvest only)
+        run: |
+          python3 main.py --phase 3
+      
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m')" >> $GITHUB_OUTPUT
+      
+      - name: Create release package
+        run: |
+          cd data
+          zip -r ../dataset-${{ steps.date.outputs.date }}.zip \
+            articles.csv \
+            journals_raw.csv \
+            journals_publisher_*.txt
+          cd ..
+      
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create ${{ steps.date.outputs.date }} \
+            dataset-${{ steps.date.outputs.date }}.zip \
+            --title "Dataset ${{ steps.date.outputs.date }}" \
+            --notes "Harvest bulanan jurnal Sinta 3-4 Science"
+      
+      - name: Commit state.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/state.json
+          git diff --staged --quiet || git commit -m "chore: update state.json after ${{ steps.date.outputs.date }} harvest"
+          git push

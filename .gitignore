@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/*.log
+*.log
+
+# Dataset (will be uploaded to GitHub Releases)
+data/articles.csv
+
+# Sandbox results (temporary manual runs)
+data/sandbox/*
+!data/sandbox/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

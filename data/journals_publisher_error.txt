@@ -1,0 +1,47 @@
+Jurnal Manajemen Motivasi|http://openjurnal.unmuhpnk.ac.id/index.php/jm_motivasi|3|timeout
+JURNAL RISET DAN APLIKASI: AKUNTANSI DAN MANAJEMEN|http://jraam.polinema.ac.id/index.php/jraam1/index|3|connection_error
+Islamic Economics Journal|https://ejournal.unida.gontor.ac.id/index.php/JEI/index|3|timeout
+Lectura : Jurnal Pendidikan|http://journal.unilak.ac.id/index.php/lectura|3|timeout
+Jurnal Pelita PAUD|http://jurnal.upmk.ac.id/index.php/pelitapaud/issue/archive|3|timeout
+Jurnal Manajemen (Edisi Elektronik)|http://ejournal.uika-bogor.ac.id/index.php/manajemen/index|3|timeout
+e-Jurnal Apresiasi Ekonomi|http://stiepasaman.ac.id/ojsapresiasiekonomi/index.php/apresiasiekonomi|3|connection_error
+Digital Zone: Jurnal teknologi informasi dan Komunikasi|https://journal.unilak.ac.id/index.php/dz/issue/archive|3|timeout
+Jurnal Manajemen Transportasi & Logistik (JMTRANSLOG)|https://journal.itltrisakti.ac.id/index.php/jmtranslog|3|connection_error
+Jurnal Kimia dan Kemasan|http://ejournal.kemenperin.go.id/jkk/index|3|connection_error
+Journal of Management and Business Review|http://www.jmbr.ppm-school.ac.id/index.php/jmbr|3|connection_error
+Jurnal Teknologi Pangan dan Gizi|https://journal.ukwms.ac.id/index.php/JTPG/index|3|connection_error
+Jurnal Teknologi dan Industri Pertanian Indonesia|https://jurnal.usk.ac.id/TIPI/index|3|connection_error
+Amal Ilmiah : Jurnal Pengabdian Kepada Masyarakat|https://amalilmiah.uho.ac.id/index.php/journal|3|connection_error
+Aquacultura Indonesiana|http://aquasiana.org/index.php/ai|3|connection_error
+Jurnal Kimia Terapan Indonesia (Indonesian Journal of Applied Chemistry)|http://inajac.lipi.go.id/index.php/InaJAC|3|connection_error
+Metal Indonesia|http://www.jurnalmetal.or.id/jmi|3|connection_error
+Jurnal Airaha|https://jurnalairaha.org/index.php/airaha|3|connection_error
+Jurnal Penelitian Ekosistem Dipterokarpa|http://ejournal.forda-mof.org/ejournal-litbang/index.php/JPED|3|connection_error
+Majalah Ilmiah Biologi Biosfera: A Scientific Journal|https://journal.bio.unsoed.ac.id/index.php/biosfera/index|3|connection_error
+Buletin Pos dan Telekomunikasi|https://bpostel.kominfo.go.id/index.php/bpostel|3|connection_error
+Scripta Biologica|http://journal.bio.unsoed.ac.id/index.php/scribio|3|connection_error
+Shahih: Journal of Islamicate Multidisciplinary|https://ejournal.uinsaid.ac.id/index.php/shahih/index|3|connection_error
+Jurnal Penelitian Kehutanan Faloak|http://ejournal.forda-mof.org/ejournal-litbang/index.php/JPKF/index|3|connection_error
+Food Scientia: Journal of Food Science and Technology|http://jurnal.ut.ac.id/index.php/foodscientia|3|timeout
+JIPI (JURNAL ILMU PERPUSTAKAAN DAN INFORMASI)|http://jurnal.uinsu.ac.id/index.php/jipi|3|timeout
+SYSTEMIC: Information System and Informatics Journal|http://jurnalsaintek.uinsby.ac.id/index.php/SYSTEMIC|4|connection_error
+Journal of Management and Digital Business|https://journal.nurscienceinstitute.id/index.php/jmdb|4|connection_error
+Jurnal Pendidikan Fisika Tadulako Online (JPFT)|https://jurnal.fkip.untad.ac.id/index.php/jpft/index|4|connection_error
+Symbiotic: Journal of Biological Education and Science|https://symbiotic.jurnal.iainkerinci.ac.id/index.php/symbiotic|4|connection_error
+Jurnal Ilmiah Teknologi Informasi Asia|https://jurnal.stmikasia.ac.id/index.php/jitika|4|connection_error
+ZONAsi : Jurnal Sistem Informasi|https://journal.unilak.ac.id/index.php/zn|4|timeout
+Darussalam Nutrition Journal|https://ejournal.unida.gontor.ac.id/index.php/nutrition|4|timeout
+Computatio: Journal of Computer Science and Information Systems|http://journal.untar.ac.id/index.php/computatio/index|4|connection_error
+Jurnal Penelitian Ilmu-Ilmu Kelaman Buana Sains|http://jurnal.unitri.ac.id/index.php/buanasains|4|timeout
+AgriPeat|http://e-journal.upr.ac.id/index.php/AGP|4|timeout
+Jurnal Ilmiah Biosaintropis (Bioscience-Tropic)|http://biosaintropis.unisma.ac.id|4|timeout
+Bio-Lectura|http://journal.unilak.ac.id/index.php/BL|4|timeout
+ORBITA: Jurnal Pendidikan dan Ilmu Fisika|http://journal.ummat.ac.id/index.php/orbita|4|timeout
+Public Policy : Jurnal Aplikasi Kebijakan Publik dan Bisnis|https://stia-saidperintah.e-journal.id/ppj|4|connection_error
+Abdi Masyarakat UIKA|https://pkm.uika-bogor.ac.id/index.php/amk|4|connection_error
+Al Tijarah|http://ejournal.unida.gontor.ac.id/index.php/altijarah|4|timeout
+JURNAL TAM (TECHNOLOGY ACCEPTANCE MODEL)|http://jurnal.stmikpringsewu.ac.id/index.php/file1/issue/archive|4|connection_error
+Natural Science: Journal of Science and Technology|http://jurnal.untad.ac.id/jurnal/index.php/ejurnalfmipa/index|4|connection_error
+Jurnal Pasar Modal dan Bisnis|http://jurnal.ticmi.co.id/index.php/jpmb|4|connection_error
+Jurnal TAM (Technology Acceptance Model)|http://ojs.stmikpringsewu.ac.id/index.php/JurnalTam|4|connection_error
+Jurnal Ruaya : Jurnal Penelitian dan Kajian Ilmu Perikanan dan Kelautan|http://openjurnal.unmuhpnk.ac.id/index.php/JR|4|timeout

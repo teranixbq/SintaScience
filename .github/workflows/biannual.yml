@@ -1,0 +1,60 @@
+name: Biannual Full Update
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *'  # 1 Januari, jam 00:00 UTC
+    - cron: '0 0 1 7 *'  # 1 Juli, jam 00:00 UTC
+  workflow_dispatch:      # Manual trigger
+
+jobs:
+  full-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Run All Phases (Crawl + Validate + Harvest)
+        run: |
+          python3 main.py --all
+      
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m')" >> $GITHUB_OUTPUT
+      
+      - name: Create release package
+        run: |
+          cd data
+          zip -r ../dataset-${{ steps.date.outputs.date }}.zip \
+            articles.csv \
+            journals_raw.csv \
+            journals_publisher_*.txt
+          cd ..
+      
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create ${{ steps.date.outputs.date }} \
+            dataset-${{ steps.date.outputs.date }}.zip \
+            --title "Dataset ${{ steps.date.outputs.date }} (Full Update)" \
+            --notes "Full update: crawl Sinta + validasi OAI + harvest artikel baru"
+      
+      - name: Commit all changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/state.json data/journals_raw.csv data/journals_publisher_*.txt
+          git diff --staged --quiet || git commit -m "chore: biannual update ${{ steps.date.outputs.date }}"
+          git push

@@ -1,0 +1,60 @@
+name: Manual Sandbox Run
+
+on:
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: 'Phase to run (3, 2 3, atau 1 2 3)'
+        required: true
+        default: '3'
+        type: choice
+        options:
+          - '3'
+          - '2 3'
+          - '1 2 3'
+
+jobs:
+  sandbox:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Create sandbox folder with timestamp
+        id: sandbox
+        run: |
+          timestamp=$(date +'%Y-%m-%d_%H%M%S')
+          mkdir -p data/sandbox/$timestamp
+          echo "folder=$timestamp" >> $GITHUB_OUTPUT
+      
+      - name: Limit journals to 10 for sandbox
+        run: |
+          # Ambil 10 jurnal pertama dari oai_active.txt untuk sandbox
+          head -10 data/journals_publisher_oai_active.txt \
+            > data/sandbox/${{ steps.sandbox.outputs.folder }}/journals_sample.txt
+          echo "Sandbox: $(wc -l < data/sandbox/${{ steps.sandbox.outputs.folder }}/journals_sample.txt) jurnal"
+      
+      - name: Run selected phases (sandbox mode)
+        run: |
+          python3 main.py --phase ${{ github.event.inputs.phase }} \
+            --sandbox data/sandbox/${{ steps.sandbox.outputs.folder }}
+      
+      - name: Commit sandbox results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/sandbox/${{ steps.sandbox.outputs.folder }}/
+          git diff --staged --quiet || git commit -m "test: sandbox run ${{ steps.sandbox.outputs.folder }} (phase ${{ github.event.inputs.phase }})"
+          git push
